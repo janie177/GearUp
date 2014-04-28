@@ -1,0 +1,4 @@
+main: com.minegusta.GearUp.Main
+author: [janie177]
+version: ${project.verion}
+name: GearUp
