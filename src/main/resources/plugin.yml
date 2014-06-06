@@ -1,4 +1,4 @@
-main: com.minegusta.GearUp.Main
+main: com.minegusta.gearup.Main
 author: [janie177]
 version: ${project.verion}
 name: GearUp

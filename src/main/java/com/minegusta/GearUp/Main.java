@@ -1,4 +1,4 @@
-package com.minegusta.GearUp;
+package com.minegusta.gearup;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
