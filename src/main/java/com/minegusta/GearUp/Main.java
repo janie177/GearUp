@@ -18,6 +18,9 @@ public class Main extends JavaPlugin
 	@Override
 	public void onEnable()
     {
+        //Plugin
+        PLUGIN = this;
+
         //SaveTask
         saveTask = SaveTask.saveTask;
 
@@ -26,9 +29,6 @@ public class Main extends JavaPlugin
 
         //Armour Check
         armourCheck = ArmourUnEquip.armourUnquipCheck;
-
-        //Plugin
-        PLUGIN = this;
 
         //Config
         FileManager.loadConfig();

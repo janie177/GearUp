@@ -2,6 +2,7 @@ package com.minegusta.gearup.shop;
 
 
 import com.minegusta.gearup.files.Config;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
@@ -12,32 +13,40 @@ import org.bukkit.inventory.ItemStack;
 public class ItemShop {
 
     private String invName;
-    InventoryClickEvent e;
+    private InventoryClickEvent e;
+    private Player entityPlayer;
+
 
 
     public ItemShop(InventoryClickEvent e)
     {
         invName = e.getInventory().getTitle();
         this.e = e;
+        entityPlayer = (Player) e.getWhoClicked();
     }
 
     public boolean isShop()
     {
-        if (invName != null && invName.equals("ShopKeeper's inventory") && e.getWhoClicked().hasPermission("minegusta.donator")) {
-            if (e.getCursor() != null && e.getCurrentItem().getType().equals(Material.AIR))
+        if (invName != null && invName.equals("ShopKeeper's Inventory")) {
+            if (!e.getCursor().getType().equals(Material.AIR))
             {
                 e.setCancelled(true);
-            }
-            if (e.getCurrentItem().getType() == Material.AIR)
-            {
+                entityPlayer.updateInventory();
                 return false;
             }
-            if (e.getCurrentItem() == null || e.getCurrentItem().getItemMeta().getDisplayName() == null)
+            if (e.getCurrentItem() == null || e.getCurrentItem().getType() == Material.AIR)
             {
+                e.setCancelled(true);
                 return false;
             }
+            if (e.getCurrentItem().getItemMeta().getDisplayName() == null)
+            {
+                e.setCancelled(true);
+                return false;
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 
     public void apply()
@@ -55,8 +64,6 @@ public class ItemShop {
         }
 
         if (theItemToAdd == null) return;
-
-        Player entityPlayer = (Player) player;
 
         Config config = new Config();
 

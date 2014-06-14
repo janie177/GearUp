@@ -50,7 +50,8 @@ public class RainbowBoost
 
     private void sendTimeRemaining(long time)
     {
-        p.sendMessage(ChatColor.RED + "You have to wait another " + time + " seconds before you can use SonicRainBoom!");
+        long remaining = 15 - time;
+        p.sendMessage(ChatColor.RED + "You have to wait another " + remaining + " seconds before you can use SonicRainBoom!");
     }
 
     public void bOOM()
@@ -74,7 +75,7 @@ public class RainbowBoost
                 @Override
                 public void run() {
 
-                    world.spigot().playEffect(p.getLocation(), Effect.COLOURED_DUST, 1,1, 2, 2, 2, 1, 30, 30);
+                    world.spigot().playEffect(p.getLocation(), Effect.COLOURED_DUST, 1,1, 1, 1, 1, 1, 40, 30);
                 }
 
             }, i);

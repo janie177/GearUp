@@ -51,6 +51,7 @@ public class ShopInv {
                     int credits = config.getCredits(p.getUniqueId());
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You begin trading with the ShopKeeper.");
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You have " + ChatColor.LIGHT_PURPLE + credits + ChatColor.GRAY + " credits.");
+                    e.setCancelled(true);
                     openInventoryOfTrader(e.getPlayer());
 
 
@@ -62,7 +63,7 @@ public class ShopInv {
     //Private
 
     private void openInventoryOfTrader(Player user) {
-        String title = "ShopKeeper's inventory";
+        String title = "ShopKeeper's Inventory";
         Inventory inv = Bukkit.getServer().createInventory(null, 18, title);
         user.openInventory(inv);
 
