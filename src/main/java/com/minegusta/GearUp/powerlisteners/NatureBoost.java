@@ -41,7 +41,7 @@ public class NatureBoost
     public void grassify()
     {
         b.setType(Material.GRASS);
-        b.getWorld().spigot().playEffect(b.getLocation(), Effect.HAPPY_VILLAGER, 1, 1, 1, 0, 1, 1, 7, 10);
+        b.getWorld().spigot().playEffect(b.getLocation(), Effect.HAPPY_VILLAGER, 1, 1, 1, 2, 1, 1, 10, 10);
     }
 
     public boolean isEaten()
