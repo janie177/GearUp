@@ -1,7 +1,6 @@
 package com.minegusta.gearup.armourlistening;
 
 import com.minegusta.gearup.data.TempData;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -48,7 +47,6 @@ public class ArmourEquip
             {
                 if(a.get().equalsIgnoreCase(i.getItemMeta().getLore().get(1)))
                 {
-                    Bukkit.broadcastMessage("Special get!!");
                     armourName = a.get();
                     return true;
                 }
@@ -73,19 +71,13 @@ public class ArmourEquip
 
     public boolean isArmourEquip()
     {
-        if(slot.equals(InventoryType.SlotType.ARMOR) && !e.getCursor().getType().equals(Material.AIR))
-        {
-            Bukkit.broadcastMessage("It's a normal click equip!");
-            return true;
-        }
-        return false;
+        return(slot.equals(InventoryType.SlotType.ARMOR) && !e.getCursor().getType().equals(Material.AIR));
     }
 
     public boolean isShift()
     {
         if((clickType.equals(ClickType.SHIFT_RIGHT) || clickType.equals(ClickType.SHIFT_LEFT)) && e.getCurrentItem() != null && !e.getCurrentItem().getType().equals(Material.AIR))
         {
-            Bukkit.broadcastMessage("It's a shift click!");
             i = e.getCurrentItem();
             return true;
         }

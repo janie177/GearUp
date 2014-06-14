@@ -57,7 +57,7 @@ public class RainbowBoost
     public void bOOM()
     {
         Vector v = p.getVelocity();
-        v.setY(2.8);
+        v.setY(2.3);
         p.teleport(p.getLocation().add(0, 0.5, 0));
         p.setVelocity(v);
         p.setFallDistance(0F);
@@ -68,7 +68,7 @@ public class RainbowBoost
         //Particles
         final World world = p.getWorld();
 
-        for (int i = 0; i < 20 * 5; i++)
+        for (int i = 0; i < 20 * 4; i++)
         {
             Bukkit.getScheduler().scheduleSyncDelayedTask(Main.PLUGIN, new Runnable() {
 

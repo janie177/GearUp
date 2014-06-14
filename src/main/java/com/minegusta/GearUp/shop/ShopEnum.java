@@ -101,12 +101,24 @@ public enum ShopEnum
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
     }, "380", ChatColor.RED + "Leggings of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten")),
+
     Molten4(new ItemStack(Material.DIAMOND_BOOTS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "280", ChatColor.RED + "Boots of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten"));
+    }, "280", ChatColor.RED + "Boots of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten")),
+    Misc1(new ItemStack(Material.EXP_BOTTLE, 8), "10", ChatColor.GOLD + "Experience Bottle", Lists.newArrayList(ChatColor.GRAY + "Throw it on the ground!")),
+    Misc2(new ItemStack(Material.PORTAL, 1), "40", ChatColor.GOLD + "Nether Portal", Lists.newArrayList(ChatColor.GRAY + "Free trips to hell.")),
+    Misc3(new ItemStack(Material.DRAGON_EGG, 1), "280", ChatColor.GOLD + "Dragon Egg", Lists.newArrayList(ChatColor.GRAY + "Dragon fetus not included.")),
+    Misc4(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Pig Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig spawner.")),
+    Misc5(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Blaze Spawner", Lists.newArrayList(ChatColor.GRAY + "Blaze spawner.")),
+    Misc6(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Zombie spawner.")),
+    Misc7(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Skeleton Spawner", Lists.newArrayList(ChatColor.GRAY + "Skeleton spawner.")),
+    Misc8(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Spider Spawner", Lists.newArrayList(ChatColor.GRAY + "Spider spawner.")),
+    Misc9(new ItemStack(Material.MOB_SPAWNER, 1), "80", ChatColor.GOLD + "CaveSpider Spawner", Lists.newArrayList(ChatColor.GRAY + "CaveSpider spawner.")),
+    Misc10(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish spawner.")),
+    Misc11(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1), "150", ChatColor.GOLD + "GOD APPLE", Lists.newArrayList(ChatColor.GRAY + "Food for rich people."));
 
     private ItemStack i;
     private String name;
