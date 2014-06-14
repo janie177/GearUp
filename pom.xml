@@ -6,7 +6,7 @@
 
     <groupId>com.minegusta</groupId>
     <artifactId>GearUp</artifactId>
-    <version>1.5.2</version>
+    <version>0.1.1.0</version>
     <packaging>jar</packaging>
 
     <name>GearUp</name>
@@ -47,7 +47,7 @@
     </dependencies>
 
     <build>
-        <finalName>MausWasHere</finalName>
+        <finalName>GearUp</finalName>
         <defaultGoal>clean install</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
         <resources>

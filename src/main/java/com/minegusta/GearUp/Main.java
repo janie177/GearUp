@@ -1,5 +1,7 @@
 package com.minegusta.gearup;
 
+import com.minegusta.gearup.armourlistening.ArmourUnEquip;
+import com.minegusta.gearup.commands.CreditCommand;
 import com.minegusta.gearup.files.FileManager;
 import com.minegusta.gearup.listeners.ShopListener;
 import com.minegusta.gearup.tasks.BoostTask;
@@ -11,8 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin
 {
     public static Plugin PLUGIN;
-    private int saveTask;
-    private int boostTask;
+    private int saveTask, boostTask, armourCheck;
 
 	@Override
 	public void onEnable()
@@ -23,6 +24,9 @@ public class Main extends JavaPlugin
         //BoostTask
         boostTask = BoostTask.boostTask;
 
+        //Armour Check
+        armourCheck = ArmourUnEquip.armourUnquipCheck;
+
         //Plugin
         PLUGIN = this;
 
@@ -32,6 +36,9 @@ public class Main extends JavaPlugin
         //Events
         Bukkit.getPluginManager().registerEvents(new ShopListener(), this);
 
+        //Commands
+        getCommand("credits").setExecutor(new CreditCommand());
+        getCommand("addcredits").setExecutor(new CreditCommand());
 	}
 
 	@Override
@@ -40,6 +47,7 @@ public class Main extends JavaPlugin
         //stop savetask
         Bukkit.getServer().getScheduler().cancelTask(saveTask);
         Bukkit.getServer().getScheduler().cancelTask(boostTask);
+        Bukkit.getServer().getScheduler().cancelTask(armourCheck);
 
         //Save config
         FileManager.saveConfig();

@@ -1,9 +1,11 @@
 package com.minegusta.gearup.armourlistening;
 
 import com.minegusta.gearup.data.TempData;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -12,7 +14,7 @@ public class ArmourEquip
     private Player p;
     private ItemStack i;
     private String armourName;
-    private ClickType clickType;
+    InventoryType.SlotType slot;
 
     public ArmourEquip(PlayerInteractEvent e)
     {
@@ -24,15 +26,10 @@ public class ArmourEquip
     {
         this.p = (Player) e.getWhoClicked();
         this.i = e.getCurrentItem();
-        this.clickType = e.getClick();
+        this.slot = e.getSlotType();
     }
 
 
-
-    public boolean isShiftClick()
-    {
-        return clickType.equals(ClickType.SHIFT_LEFT);
-    }
 
     public boolean isSpecialArmour()
     {
@@ -48,17 +45,30 @@ public class ArmourEquip
             }
         }
         return false;
-
     }
 
-    public String getArmourType()
+    public boolean hasSet()
     {
-        return ArmourTypes.valueOf(i.getItemMeta().getLore().get(1).toUpperCase()).get();
+        ItemStack[] armour = p.getInventory().getArmorContents();
+
+        for(ItemStack is : armour)
+        {
+            if(is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(armourName)))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isArmourEquip()
+    {
+        return slot.equals(InventoryType.SlotType.ARMOR);
     }
 
 
-    public Boolean addToMap()
+    public void addToMap()
     {
-        TempData.
+        TempData.armourMap.put(p.getUniqueId(), armourName);
     }
 }

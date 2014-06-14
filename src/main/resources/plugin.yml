@@ -2,3 +2,10 @@ main: com.minegusta.gearup.Main
 author: [janie177]
 version: ${project.verion}
 name: GearUp
+commands:
+   addcredits:
+      description: Add credits to a player.
+      usage: /addcredits player amount
+   credits:
+      description: View your own credits.
+      usage: /credits

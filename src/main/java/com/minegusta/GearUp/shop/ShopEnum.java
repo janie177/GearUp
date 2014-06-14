@@ -11,108 +11,102 @@ import java.util.List;
 
 public enum ShopEnum
 {
-    I1(new ItemStack(Material.DIAMOND_HELMET)
+    Shadow1(new ItemStack(Material.DIAMOND_HELMET)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I2(new ItemStack(Material.DIAMOND_HELMET)
+    }, "300", ChatColor.BLACK + "Helmet of Shadow", Lists.newArrayList(ChatColor.GRAY + "Shadow boost when wearing a full set", "Shadow")),
+    Shadow2(new ItemStack(Material.DIAMOND_CHESTPLATE)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I3(new ItemStack(Material.DIAMOND_HELMET)
+    }, "400", ChatColor.BLACK + "ChestPlate of Shadow", Lists.newArrayList(ChatColor.GRAY + "Shadow boost when wearing a full set", "Shadow")),
+    Shadow3(new ItemStack(Material.DIAMOND_LEGGINGS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I4(new ItemStack(Material.DIAMOND_HELMET)
+    }, "380", ChatColor.BLACK + "Leggings of Shadow", Lists.newArrayList(ChatColor.GRAY + "Shadow boost when wearing a full set", "Shadow")),
+    Shadow4(new ItemStack(Material.DIAMOND_BOOTS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I5(new ItemStack(Material.DIAMOND_HELMET)
+    }, "280", ChatColor.BLACK + "Boots of Shadow", Lists.newArrayList(ChatColor.GRAY + "Shadow boost when wearing a full set", "Shadow")),
+    Rainbow1(new ItemStack(Material.DIAMOND_HELMET)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I7(new ItemStack(Material.DIAMOND_HELMET)
+    }, "300", ChatColor.LIGHT_PURPLE + "Helmet of Rainbow", Lists.newArrayList(ChatColor.GRAY + "Rainbow boost when wearing a full set", "Rainbow")),
+    Rainbow2(new ItemStack(Material.DIAMOND_CHESTPLATE)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I8(new ItemStack(Material.DIAMOND_HELMET)
+    }, "400", ChatColor.LIGHT_PURPLE + "ChestPlate of Rainbow", Lists.newArrayList(ChatColor.GRAY + "Rainbow boost when wearing a full set", "Rainbow")),
+    Rainbow3(new ItemStack(Material.DIAMOND_LEGGINGS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I9(new ItemStack(Material.DIAMOND_HELMET)
+    }, "380", ChatColor.LIGHT_PURPLE + "Leggings of Rainbow", Lists.newArrayList(ChatColor.GRAY + "Rainbow boost when wearing a full set", "Rainbow")),
+    Rainbow4(new ItemStack(Material.DIAMOND_BOOTS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I10(new ItemStack(Material.DIAMOND_HELMET)
+    }, "280", ChatColor.LIGHT_PURPLE + "Boots of Rainbow", Lists.newArrayList(ChatColor.GRAY + "Rainbow boost when wearing a full set", "Rainbow")),
+    Nature1(new ItemStack(Material.DIAMOND_HELMET)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I11(new ItemStack(Material.DIAMOND_HELMET)
+    }, "300", ChatColor.GREEN + "Helmet of Nature", Lists.newArrayList(ChatColor.GRAY + "Nature boost when wearing a full set", "Nature")),
+    Nature2(new ItemStack(Material.DIAMOND_CHESTPLATE)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I12(new ItemStack(Material.DIAMOND_HELMET)
+    }, "400", ChatColor.GREEN + "ChestPlate of Nature", Lists.newArrayList(ChatColor.GRAY + "Nature boost when wearing a full set", "Nature")),
+    Nature3(new ItemStack(Material.DIAMOND_LEGGINGS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I13(new ItemStack(Material.DIAMOND_HELMET)
+    }, "380", ChatColor.GREEN + "Leggings of Nature", Lists.newArrayList(ChatColor.GRAY + "Nature boost when wearing a full set", "Nature")),
+    Nature4(new ItemStack(Material.DIAMOND_BOOTS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I14(new ItemStack(Material.DIAMOND_HELMET)
+    }, "280", ChatColor.GREEN + "Boots of Nature", Lists.newArrayList(ChatColor.GRAY + "Nature boost when wearing a full set", "Nature")),
+    Molten1(new ItemStack(Material.DIAMOND_HELMET)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I15(new ItemStack(Material.DIAMOND_HELMET)
+    }, "300", ChatColor.RED + "Helmet of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten")),
+    Molten2(new ItemStack(Material.DIAMOND_CHESTPLATE)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I16(new ItemStack(Material.DIAMOND_HELMET)
+    }, "400", ChatColor.RED + "ChestPlate of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten")),
+    Molten3(new ItemStack(Material.DIAMOND_LEGGINGS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I17(new ItemStack(Material.DIAMOND_HELMET)
+    }, "380", ChatColor.RED + "Leggings of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten")),
+    Molten4(new ItemStack(Material.DIAMOND_BOOTS)
     {
         {
             addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
         }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.")),
-    I18(new ItemStack(Material.DIAMOND_HELMET)
-    {
-        {
-            addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
-        }
-    }, "400", ChatColor.RED + "Helmet of", Lists.newArrayList(ChatColor.GRAY + "Bonus when wearing a full set.", "ArmourType"));
+    }, "280", ChatColor.RED + "Boots of Molten", Lists.newArrayList(ChatColor.GRAY + "Molten boost when wearing a full set", "Molten"));
 
     private ItemStack i;
     private String name;

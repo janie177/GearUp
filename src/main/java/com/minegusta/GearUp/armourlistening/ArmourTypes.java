@@ -6,8 +6,7 @@ public enum ArmourTypes {
     SHADOW("Shadow"),
     NATURE("Nature"),
     RAINBOW("Rainbow"),
-    MOLTEN("Molten"),
-    ICE("Ice");
+    MOLTEN("Molten");
 
     private String type;
 
