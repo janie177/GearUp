@@ -43,6 +43,7 @@ public class ShopInv {
             {
                 if (!e.getPlayer().getItemInHand().getType().equals(Material.AIR))
                 {
+                    e.setCancelled(true);
                     e.getPlayer().sendMessage(ChatColor.RED + "You can only trade with an empty hand!");
                 }
                 else
@@ -64,7 +65,7 @@ public class ShopInv {
 
     private void openInventoryOfTrader(Player user) {
         String title = "ShopKeeper's Inventory";
-        Inventory inv = Bukkit.getServer().createInventory(null, 18, title);
+        Inventory inv = Bukkit.getServer().createInventory(null, 27, title);
         user.openInventory(inv);
 
         int count = 0;
