@@ -2,7 +2,6 @@ package com.minegusta.gearup.shop;
 
 
 import com.minegusta.gearup.files.Config;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;

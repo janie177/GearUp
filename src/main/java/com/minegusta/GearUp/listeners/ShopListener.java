@@ -1,6 +1,7 @@
 package com.minegusta.gearup.listeners;
 
 import com.minegusta.gearup.armourlistening.ArmourEquip;
+import com.minegusta.gearup.armourlistening.HasSet;
 import com.minegusta.gearup.powerlisteners.MoltenBoost;
 import com.minegusta.gearup.powerlisteners.NatureBoost;
 import com.minegusta.gearup.powerlisteners.RainbowBoost;
@@ -13,11 +14,7 @@ import org.bukkit.event.entity.EntityDamageByBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerItemConsumeEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.event.player.*;
 
 public class ShopListener implements Listener {
 
@@ -68,7 +65,7 @@ public class ShopListener implements Listener {
         }
 
         FallDamage fall = new FallDamage(e);
-        if(fall.isInMap())
+        if(fall.isFallDamage() && fall.isInMap())
         {
             fall.cancel();
         }
@@ -81,9 +78,13 @@ public class ShopListener implements Listener {
         if(shop.isShop())shop.apply();
 
         ArmourEquip armour = new ArmourEquip(e);
-        if(armour.isSpecialArmour() && armour.isArmourEquip() && armour.hasSet())
+        if((armour.isShift() || armour.isArmourEquip()) && armour.isSpecialArmour())
         {
-            armour.addToMap();
+           HasSet isSet = new HasSet(armour.getEventPlayer(), armour.getArmourName(), armour.getItemStack());
+           if(isSet.hasSet())
+           {
+               armour.addToMap();
+           }
         }
     }
 
@@ -91,8 +92,13 @@ public class ShopListener implements Listener {
     public void armourInteract(PlayerInteractEvent e)
     {
         ArmourEquip armour = new ArmourEquip(e);
-        if(armour.isSpecialArmour() && armour.hasSet())
+        if(armour.isSpecialArmour())
         {
+            HasSet isSet = new HasSet(armour.getEventPlayer(), armour.getArmourName(), armour.getItemStack());
+            if(isSet.hasSet())
+            {
+                armour.addToMap();
+            }
             armour.addToMap();
         }
     }
@@ -115,5 +121,11 @@ public class ShopListener implements Listener {
         {
             boost.bOOM();
         }
+    }
+
+    @EventHandler
+    public void onPlayerJoin(PlayerJoinEvent e)
+    {
+        new PlayerJoin(e);
     }
 }

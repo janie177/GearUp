@@ -4,8 +4,6 @@ import com.minegusta.gearup.Main;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import java.io.File;
-
 public class FileManager {
 
     private static Plugin plugin = Main.PLUGIN;

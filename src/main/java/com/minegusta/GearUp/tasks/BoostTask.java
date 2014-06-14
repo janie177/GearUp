@@ -24,7 +24,7 @@ public class BoostTask {
 
                     if(TempData.armourMap.get(uuid).equalsIgnoreCase("Shadow"))
                     {
-                        playEffect(p, Effect.SMALL_SMOKE);
+                        playEffect(p, Effect.PARTICLE_SMOKE);
                         ShadowBoost boost = new ShadowBoost(p);
                         if(boost.isDark())
                         {
@@ -57,6 +57,6 @@ public class BoostTask {
 
     private static void playEffect(Player p, Effect effect)
     {
-        p.getWorld().spigot().playEffect(p.getLocation(), effect, 1, 1, 1, 1, 1, 1, 6, 10);
+        p.getWorld().spigot().playEffect(p.getLocation(), effect, 1, 1, 1, 1, 1, 1, 8, 10);
     }
 }
