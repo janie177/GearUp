@@ -75,7 +75,7 @@ public class RainbowBoost
                 @Override
                 public void run() {
 
-                    world.spigot().playEffect(p.getLocation(), Effect.COLOURED_DUST, 1,1, 1, 1, 1, 1, 40, 30);
+                    world.spigot().playEffect(p.getLocation(), Effect.COLOURED_DUST, 1,1, 1, 1, 1, 1, 48, 30);
                 }
 
             }, i);

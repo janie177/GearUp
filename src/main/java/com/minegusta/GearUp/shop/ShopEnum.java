@@ -123,8 +123,10 @@ public enum ShopEnum
 
     public ItemStack shopItem()
     {
+        List<String> lore = Lists.newArrayList(desc);
         ItemMeta meta = i.getItemMeta();
-        desc.add(ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
+        if(lore.size() < 3)lore.add(ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
+        if(lore.size() > 2)lore.set(2, ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
         meta.setLore(desc);
         meta.setDisplayName(name);
         i.setItemMeta(meta);
