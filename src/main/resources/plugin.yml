@@ -1,6 +1,6 @@
 main: com.minegusta.gearup.Main
 author: [janie177]
-version: ${project.verion}
+version: ${project.version}
 name: GearUp
 commands:
    addcredits:
