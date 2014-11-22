@@ -111,14 +111,14 @@ public enum ShopEnum
     Misc1(new ItemStack(Material.EXP_BOTTLE, 8), "10", ChatColor.GOLD + "Experience Bottle", Lists.newArrayList(ChatColor.GRAY + "Throw it on the ground!")),
     Misc2(new ItemStack(Material.PORTAL, 1), "40", ChatColor.GOLD + "Nether Portal", Lists.newArrayList(ChatColor.GRAY + "Free trips to hell.")),
     Misc3(new ItemStack(Material.DRAGON_EGG, 1), "280", ChatColor.GOLD + "Dragon Egg", Lists.newArrayList(ChatColor.GRAY + "Dragon fetus not included.")),
-    Misc4(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Pig Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig spawner.")),
-    Misc5(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Blaze Spawner", Lists.newArrayList(ChatColor.GRAY + "Blaze spawner.")),
-    Misc6(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Zombie spawner.")),
-    Misc7(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Skeleton Spawner", Lists.newArrayList(ChatColor.GRAY + "Skeleton spawner.")),
-    Misc8(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Spider Spawner", Lists.newArrayList(ChatColor.GRAY + "Spider spawner.")),
-    Misc9(new ItemStack(Material.MOB_SPAWNER, 1), "80", ChatColor.GOLD + "CaveSpider Spawner", Lists.newArrayList(ChatColor.GRAY + "CaveSpider spawner.")),
-    Misc10(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish spawner.")),
-    Misc11(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1), "150", ChatColor.GOLD + "GOD APPLE", Lists.newArrayList(ChatColor.GRAY + "Food for rich people."));
+    Misc4(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Pig Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig Spawner.")),
+    Misc5(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Blaze Spawner", Lists.newArrayList(ChatColor.GRAY + "Blaze Spawner.")),
+    Misc6(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Zombie Spawner.")),
+    Misc7(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Skeleton Spawner", Lists.newArrayList(ChatColor.GRAY + "Skeleton Spawner.")),
+    Misc8(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Spider Spawner", Lists.newArrayList(ChatColor.GRAY + "Spider Spawner.")),
+    Misc9(new ItemStack(Material.MOB_SPAWNER, 1), "80", ChatColor.GOLD + "CaveSpider Spawner", Lists.newArrayList(ChatColor.GRAY + "CaveSpider Spawner.")),
+    Misc10(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish Spawner.")),
+    Misc11(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1), "250", ChatColor.GOLD + "GOD APPLE", Lists.newArrayList(ChatColor.GRAY + "Food for rich people."));
 
     private ItemStack i;
     private String name;
@@ -137,9 +137,8 @@ public enum ShopEnum
     {
         List<String> lore = Lists.newArrayList(desc);
         ItemMeta meta = i.getItemMeta();
-        if(lore.size() < 3)lore.add(ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
-        if(lore.size() > 2)lore.set(2, ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
-        meta.setLore(desc);
+        lore.add(ChatColor.GOLD + "Cost: " + ChatColor.AQUA + cost + ChatColor.GOLD + ".");
+        meta.setLore(lore);
         meta.setDisplayName(name);
         i.setItemMeta(meta);
 

@@ -1,7 +1,8 @@
 package com.minegusta.gearup.shop;
 
 
-import com.minegusta.gearup.files.Config;
+import com.minegusta.mgcredits.files.Config;
+import com.minegusta.mgcredits.files.CreditsManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
@@ -64,9 +65,8 @@ public class ItemShop {
 
         if (theItemToAdd == null) return;
 
-        Config config = new Config();
 
-        int pointsPresent = config.getCredits(entityPlayer.getUniqueId());
+        int pointsPresent = CreditsManager.getCredits((Player) player);
 
         if (cost > pointsPresent) {
             entityPlayer.sendMessage(ChatColor.RED + "You do not have enough points to buy that item.");
@@ -79,7 +79,7 @@ public class ItemShop {
             player.closeInventory();
             return;
         }
-        if(config.removeCredits(entityPlayer.getUniqueId(), cost)) {
+        if(CreditsManager.removeCredits(entityPlayer, cost)) {
             player.getInventory().addItem(theItemToAdd);
             entityPlayer.sendMessage(ChatColor.AQUA + "You have successfully bought an item!");
             player.closeInventory();

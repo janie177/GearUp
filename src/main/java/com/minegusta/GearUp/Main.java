@@ -1,8 +1,8 @@
 package com.minegusta.gearup;
 
 import com.minegusta.gearup.armourlistening.ArmourUnEquip;
-import com.minegusta.gearup.commands.CreditCommand;
-import com.minegusta.gearup.files.FileManager;
+import com.minegusta.mgcredits.commands.CreditCommand;
+import com.minegusta.mgcredits.files.FileManager;
 import com.minegusta.gearup.listeners.ShopListener;
 import com.minegusta.gearup.tasks.BoostTask;
 import com.minegusta.gearup.tasks.SaveTask;

@@ -2,7 +2,7 @@ package com.minegusta.gearup.tasks;
 
 
 import com.minegusta.gearup.Main;
-import com.minegusta.gearup.files.FileManager;
+import com.minegusta.mgcredits.files.FileManager;
 import org.bukkit.Bukkit;
 
 public class SaveTask {
