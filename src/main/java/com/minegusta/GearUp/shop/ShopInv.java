@@ -48,8 +48,7 @@ public class ShopInv {
                 }
                 else
                 {
-                    Config config = new Config();
-                    int credits = config.getCredits(p.getUniqueId());
+                    int credits = Config.getCredits(p.getUniqueId());
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You begin trading with the ShopKeeper.");
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You have " + ChatColor.LIGHT_PURPLE + credits + ChatColor.GRAY + " credits.");
                     e.setCancelled(true);
