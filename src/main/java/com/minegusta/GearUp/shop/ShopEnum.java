@@ -112,34 +112,34 @@ public enum ShopEnum
     Misc2(new ItemStack(Material.GLOWSTONE_DUST, 64), "40", ChatColor.GOLD + "Glowstone Dust", Lists.newArrayList(ChatColor.GRAY + "Because potions.")),
     Misc3(new ItemStack(Material.DRAGON_EGG, 1), "280", ChatColor.GOLD + "Dragon Egg", Lists.newArrayList(ChatColor.GRAY + "Dragon fetus not included.")),
 
-    Misc4(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Pig Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig Spawner.")),
+    Misc4(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Pig Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig Spawner")),
 
-    Misc5(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Blaze Spawner", Lists.newArrayList(ChatColor.GRAY + "Blaze Spawner.")),
+    Misc5(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Blaze Spawner", Lists.newArrayList(ChatColor.GRAY + "Blaze Spawner")),
 
-    Misc6(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Zombie Spawner.")),
+    Misc6(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Zombie Spawner")),
 
-    Misc7(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Skeleton Spawner", Lists.newArrayList(ChatColor.GRAY + "Skeleton Spawner.")),
-    Misc8(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Spider Spawner", Lists.newArrayList(ChatColor.GRAY + "Spider Spawner.")),
-    Misc9(new ItemStack(Material.MOB_SPAWNER, 1), "80", ChatColor.GOLD + "CaveSpider Spawner", Lists.newArrayList(ChatColor.GRAY + "CaveSpider Spawner.")),
-    Misc10(new ItemStack(Material.MOB_SPAWNER, 1), "250", ChatColor.GOLD + "Creeper Spawner", Lists.newArrayList(ChatColor.GRAY + "Creeper Spawner.")),
+    Misc7(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Skeleton Spawner", Lists.newArrayList(ChatColor.GRAY + "Skeleton Spawner")),
+    Misc8(new ItemStack(Material.MOB_SPAWNER, 1), "100", ChatColor.GOLD + "Spider Spawner", Lists.newArrayList(ChatColor.GRAY + "Spider Spawner")),
+    Misc9(new ItemStack(Material.MOB_SPAWNER, 1), "80", ChatColor.GOLD + "CaveSpider Spawner", Lists.newArrayList(ChatColor.GRAY + "CaveSpider Spawner")),
+    Misc10(new ItemStack(Material.MOB_SPAWNER, 1), "250", ChatColor.GOLD + "Creeper Spawner", Lists.newArrayList(ChatColor.GRAY + "Creeper Spawner")),
 
-    Misc11(new ItemStack(Material.MOB_SPAWNER, 1), "300", ChatColor.GOLD + "Ghast Spawner", Lists.newArrayList(ChatColor.GRAY + "Ghast Spawner.")),
+    Misc11(new ItemStack(Material.MOB_SPAWNER, 1), "300", ChatColor.GOLD + "Ghast Spawner", Lists.newArrayList(ChatColor.GRAY + "Ghast Spawner")),
 
-    Misc12(new ItemStack(Material.MOB_SPAWNER, 1), "250", ChatColor.GOLD + "Slime Spawner", Lists.newArrayList(ChatColor.GRAY + "Slime Spawner.")),
+    Misc12(new ItemStack(Material.MOB_SPAWNER, 1), "250", ChatColor.GOLD + "Slime Spawner", Lists.newArrayList(ChatColor.GRAY + "Slime Spawner")),
 
-    Misc13(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Bat Spawner", Lists.newArrayList(ChatColor.GRAY + "Bat Spawner.")),
+    Misc13(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "Bat Spawner", Lists.newArrayList(ChatColor.GRAY + "Bat Spawner")),
 
-    Misc14(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Enderman Spawner", Lists.newArrayList(ChatColor.GRAY + "Enderman Spawner.")),
+    Misc14(new ItemStack(Material.MOB_SPAWNER, 1), "160", ChatColor.GOLD + "Enderman Spawner", Lists.newArrayList(ChatColor.GRAY + "Enderman Spawner")),
 
-    Misc15(new ItemStack(Material.MOB_SPAWNER, 1), "320", ChatColor.GOLD + "Giant Spawner", Lists.newArrayList(ChatColor.GRAY + "Giant Spawner.")),
+    Misc15(new ItemStack(Material.MOB_SPAWNER, 1), "320", ChatColor.GOLD + "Giant Spawner", Lists.newArrayList(ChatColor.GRAY + "Giant Spawner")),
 
-    Misc16(new ItemStack(Material.MOB_SPAWNER, 1), "140", ChatColor.GOLD + "Pig_Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig_Zombie Spawner.")),
+    Misc16(new ItemStack(Material.MOB_SPAWNER, 1), "140", ChatColor.GOLD + "Pig_Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig_Zombie Spawner")),
 
-    Misc17(new ItemStack(Material.MOB_SPAWNER, 1), "150", ChatColor.GOLD + "Snowman Spawner", Lists.newArrayList(ChatColor.GRAY + "Snowman Spawner.")),
+    Misc17(new ItemStack(Material.MOB_SPAWNER, 1), "150", ChatColor.GOLD + "Snowman Spawner", Lists.newArrayList(ChatColor.GRAY + "Snowman Spawner")),
 
-    Misc18(new ItemStack(Material.MOB_SPAWNER, 1), "200", ChatColor.GOLD + "Witch Spawner", Lists.newArrayList(ChatColor.GRAY + "Witch Spawner.")),
+    Misc18(new ItemStack(Material.MOB_SPAWNER, 1), "200", ChatColor.GOLD + "Witch Spawner", Lists.newArrayList(ChatColor.GRAY + "Witch Spawner")),
 
-    Misc19(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish Spawner.")),
+    Misc19(new ItemStack(Material.MOB_SPAWNER, 1), "120", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish Spawner")),
     Misc20(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1), "250", ChatColor.GOLD + "GOD APPLE", Lists.newArrayList(ChatColor.GRAY + "Food for rich people."));
 
     private ItemStack i;
