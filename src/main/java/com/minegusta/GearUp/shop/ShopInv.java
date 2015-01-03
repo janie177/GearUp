@@ -64,7 +64,7 @@ public class ShopInv {
 
     private void openInventoryOfTrader(Player user) {
         String title = "ShopKeeper's Inventory";
-        Inventory inv = Bukkit.getServer().createInventory(null, 27, title);
+        Inventory inv = Bukkit.getServer().createInventory(null, 36, title);
         user.openInventory(inv);
 
         int count = 0;
