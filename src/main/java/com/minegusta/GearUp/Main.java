@@ -1,7 +1,6 @@
 package com.minegusta.gearup;
 
 import com.minegusta.gearup.armourlistening.ArmourUnEquip;
-import com.minegusta.mgcredits.commands.CreditCommand;
 import com.minegusta.gearup.listeners.ShopListener;
 import com.minegusta.gearup.tasks.BoostTask;
 import org.bukkit.Bukkit;
@@ -28,10 +27,6 @@ public class Main extends JavaPlugin
 
         //Events
         Bukkit.getPluginManager().registerEvents(new ShopListener(), this);
-
-        //Commands
-        getCommand("credits").setExecutor(new CreditCommand());
-        getCommand("addcredits").setExecutor(new CreditCommand());
 	}
 
 	@Override
