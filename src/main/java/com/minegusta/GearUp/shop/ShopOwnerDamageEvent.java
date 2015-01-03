@@ -49,7 +49,7 @@ public class ShopOwnerDamageEvent {
 
     public boolean isShopOwner()
     {
-        return villager.getCustomName() != null && villager.getCustomName().toLowerCase().contains("donor trader");
+        return villager.getCustomName() != null && villager.getCustomName().toLowerCase().contains("credits trader");
     }
 
     public void cancel()

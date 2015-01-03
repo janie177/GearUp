@@ -39,7 +39,7 @@ public class ShopInv {
         {
             Player p = e.getPlayer();
 
-            if (name.contains("Donor Trader"))
+            if (name.contains("Credits Trader"))
             {
                 if (!e.getPlayer().getItemInHand().getType().equals(Material.AIR))
                 {
