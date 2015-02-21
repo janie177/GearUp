@@ -133,7 +133,7 @@ public enum ShopEnum
 
     Misc15(new ItemStack(Material.MOB_SPAWNER, 1), "320", ChatColor.GOLD + "Giant Spawner", Lists.newArrayList(ChatColor.GRAY + "Giant Spawner")),
 
-    Misc16(new ItemStack(Material.MOB_SPAWNER, 1), "140", ChatColor.GOLD + "Pig_Zombie Spawner", Lists.newArrayList(ChatColor.GRAY + "Pig_Zombie Spawner")),
+    Misc16(new ItemStack(Material.MOB_SPAWNER, 1), "240", ChatColor.GOLD + "Sheep Spawner", Lists.newArrayList(ChatColor.GRAY + "Sheep Spawner")),
 
     Misc17(new ItemStack(Material.MOB_SPAWNER, 1), "150", ChatColor.GOLD + "Snowman Spawner", Lists.newArrayList(ChatColor.GRAY + "Snowman Spawner")),
 
