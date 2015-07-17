@@ -3,6 +3,7 @@ package com.minegusta.gearup.shop;
 
 import com.minegusta.mgcredits.files.Config;
 import com.minegusta.mgcredits.files.CreditsManager;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
@@ -55,11 +56,14 @@ public class ItemShop {
         HumanEntity player = e.getWhoClicked();
 
         ItemStack theItemToAdd = null;
+        ShopEnum chosen = null;
+
         int cost = 0;
         for (ShopEnum item : ShopEnum.values()) {
             if (!(item.shopItem().equals(e.getCurrentItem()))) continue;
             cost = item.getPoints();
             theItemToAdd = item.boughtItem();
+            chosen = item;
             break;
         }
 
@@ -79,7 +83,15 @@ public class ItemShop {
             player.closeInventory();
             return;
         }
-        if(CreditsManager.removeCredits(entityPlayer, cost)) {
+
+        if(chosen == ShopEnum.Misc13 && CreditsManager.removeCredits(entityPlayer, cost))
+        {
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "RA PerkPoints add " + entityPlayer.getName() + " 1");
+            entityPlayer.sendMessage(ChatColor.AQUA + "You bought a Perk Point!");
+            player.closeInventory();
+        }
+        else if(CreditsManager.removeCredits(entityPlayer, cost))
+        {
             player.getInventory().addItem(theItemToAdd);
             entityPlayer.sendMessage(ChatColor.AQUA + "You have successfully bought an item!");
             player.closeInventory();
