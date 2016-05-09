@@ -1,7 +1,6 @@
 package com.minegusta.gearup.shop;
 
 
-import com.minegusta.mgcredits.files.Config;
 import com.minegusta.mgcredits.files.CreditsManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
