@@ -1,6 +1,6 @@
 package com.minegusta.gearup.shop;
 
-import com.minegusta.mgcredits.files.Config;
+import com.minegusta.mgcredits.files.CreditsManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -48,7 +48,7 @@ public class ShopInv {
                 }
                 else
                 {
-                    int credits = Config.getCredits(p.getUniqueId());
+                    int credits = CreditsManager.getCredits(p);
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You begin trading with the ShopKeeper.");
                     p.sendMessage(ChatColor.AQUA + "[Trader]" + ChatColor.GRAY + " You have " + ChatColor.LIGHT_PURPLE + credits + ChatColor.GRAY + " credits.");
                     e.setCancelled(true);
