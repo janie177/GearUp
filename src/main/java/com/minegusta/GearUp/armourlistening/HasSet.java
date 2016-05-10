@@ -37,7 +37,7 @@ public class HasSet
 
         for(ItemStack is : armour)
         {
-            if(is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(armourName)))
+            if(is == null || is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(armourName)))
             {
                 maxMiss++;
                 if(maxMiss > 1)return false;
@@ -51,7 +51,7 @@ public class HasSet
         ItemStack[] armour = p.getInventory().getArmorContents();
         for(ItemStack is : armour)
         {
-            if(is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(armourName)))
+            if(is == null || is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(armourName)))
             {
                 return false;
             }
