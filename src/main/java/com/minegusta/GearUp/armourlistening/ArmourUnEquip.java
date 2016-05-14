@@ -12,6 +12,15 @@ import java.util.concurrent.ConcurrentMap;
 
 public class ArmourUnEquip
 {
+    private static int ID = -1;
+
+    public static void stop()
+    {
+        if(ID != -1)
+        {
+            Bukkit.getScheduler().cancelTask(ID);
+        }
+    }
 
     private static void unequipCheck(ConcurrentMap<UUID, String> map)
     {
@@ -25,7 +34,7 @@ public class ArmourUnEquip
 
                 for(ItemStack is : armour)
                 {
-                    if(is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(map.get(uuid))))
+                    if(is == null || is.getType().equals(Material.AIR) || !is.getItemMeta().hasLore() || is.getItemMeta().getLore().size() <=1 || !(is.getItemMeta().getLore().get(1).equalsIgnoreCase(map.get(uuid))))
                     {
                         map.remove(uuid);
                     }
@@ -37,12 +46,15 @@ public class ArmourUnEquip
 
     //Task
 
-    public static int armourUnquipCheck = Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(Main.PLUGIN, new Runnable() {
-        @Override
-        public void run()
-        {
-            unequipCheck(TempData.armourMap);
-        }
-    }, 0, 20 * 6);
+    public static void start()
+    {
+        ID = Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(Main.PLUGIN, new Runnable() {
+            @Override
+            public void run()
+            {
+                unequipCheck(TempData.armourMap);
+            }
+        }, 0, 40);
+    }
 
 }

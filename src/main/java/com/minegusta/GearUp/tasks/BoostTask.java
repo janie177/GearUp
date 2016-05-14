@@ -12,48 +12,48 @@ import java.util.UUID;
 
 public class BoostTask {
 
-    public static int boostTask = Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(Main.PLUGIN, new Runnable() {
-        @Override
-        public void run()
-        {
-            for(UUID uuid : TempData.armourMap.keySet())
-            {
-                if(Bukkit.getOfflinePlayer(uuid) != null && Bukkit.getOfflinePlayer(uuid).isOnline())
-                {
-                    Player p = Bukkit.getPlayer(uuid);
+    private static int ID = -1;
 
-                    if(TempData.armourMap.get(uuid).equalsIgnoreCase("Shadow"))
-                    {
-                        playEffect(p, Effect.PARTICLE_SMOKE);
-                        ShadowBoost boost = new ShadowBoost(p);
-                        if(boost.isDark())
-                        {
-                            boost.boost();
-                        }
-                    }
-                    else if(TempData.armourMap.get(uuid).equalsIgnoreCase("Nature"))
-                    {
-                        playEffect(p, Effect.MAGIC_CRIT);
-                        NatureBoost boost = new NatureBoost(p);
-                        if(boost.isDirt())
-                        {
-                            boost.grassify();
-                        }
-                    }
-                    else if(TempData.armourMap.get(uuid).equalsIgnoreCase("Molten"))
-                    {
-                        playEffect(p, Effect.LAVADRIP);
+    public static void start() {
 
-                    }
-                    else if(TempData.armourMap.get(uuid).equalsIgnoreCase("Rainbow"))
-                    {
-                        playEffect(p, Effect.COLOURED_DUST);
+        ID = Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(Main.PLUGIN, new Runnable() {
+            @Override
+            public void run() {
+                for (UUID uuid : TempData.armourMap.keySet()) {
+                    if (Bukkit.getOfflinePlayer(uuid) != null && Bukkit.getOfflinePlayer(uuid).isOnline()) {
+                        Player p = Bukkit.getPlayer(uuid);
+
+                        if (TempData.armourMap.get(uuid).equalsIgnoreCase("Shadow")) {
+                            playEffect(p, Effect.PARTICLE_SMOKE);
+                            ShadowBoost boost = new ShadowBoost(p);
+                            if (boost.isDark()) {
+                                boost.boost();
+                            }
+                        } else if (TempData.armourMap.get(uuid).equalsIgnoreCase("Nature")) {
+                            playEffect(p, Effect.MAGIC_CRIT);
+                            NatureBoost boost = new NatureBoost(p);
+                            if (boost.isDirt()) {
+                                boost.grassify();
+                            }
+                        } else if (TempData.armourMap.get(uuid).equalsIgnoreCase("Molten")) {
+                            playEffect(p, Effect.LAVADRIP);
+
+                        } else if (TempData.armourMap.get(uuid).equalsIgnoreCase("Rainbow")) {
+                            playEffect(p, Effect.COLOURED_DUST);
+                        }
                     }
                 }
             }
-        }
-    }, 0, 20);
+        }, 0, 20);
+    }
 
+    public static void stop()
+    {
+        if(ID != -1)
+        {
+            Bukkit.getScheduler().cancelTask(ID);
+        }
+    }
 
     private static void playEffect(Player p, Effect effect)
     {

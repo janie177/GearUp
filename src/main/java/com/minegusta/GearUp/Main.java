@@ -10,8 +10,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin
 {
     public static Plugin PLUGIN;
-    private int boostTask, armourCheck;
-
 	@Override
 	public void onEnable()
     {
@@ -20,10 +18,10 @@ public class Main extends JavaPlugin
 
 
         //BoostTask
-        boostTask = BoostTask.boostTask;
+        BoostTask.start();
 
         //Armour Check
-        armourCheck = ArmourUnEquip.armourUnquipCheck;
+        ArmourUnEquip.start();
 
         //Events
         Bukkit.getPluginManager().registerEvents(new ShopListener(), this);
@@ -33,7 +31,7 @@ public class Main extends JavaPlugin
 	public void onDisable()
 	{
         //stop savetask
-        Bukkit.getServer().getScheduler().cancelTask(boostTask);
-        Bukkit.getServer().getScheduler().cancelTask(armourCheck);
+        ArmourUnEquip.stop();
+        BoostTask.stop();
 	}
 }
