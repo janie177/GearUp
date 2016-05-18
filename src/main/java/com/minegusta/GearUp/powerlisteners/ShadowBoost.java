@@ -27,6 +27,6 @@ public class ShadowBoost
 
     public void boost()
     {
-        p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 4 ,0));
+        p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 4 ,1));
     }
 }
