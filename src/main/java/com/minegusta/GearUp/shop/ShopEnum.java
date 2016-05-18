@@ -140,7 +140,7 @@ public enum ShopEnum
     Misc18(new ItemStack(Material.MOB_SPAWNER, 1), "300", ChatColor.GOLD + "Witch Spawner", Lists.newArrayList(ChatColor.GRAY + "Witch Spawner")),
 
     Misc19(new ItemStack(Material.MOB_SPAWNER, 1), "300", ChatColor.GOLD + "SilverFish Spawner", Lists.newArrayList(ChatColor.GRAY + "SilverFish Spawner")),
-    Misc20(new ItemStack(Material.GOLDEN_APPLE, 1, (short) 1), "250", ChatColor.GOLD + "GOD APPLE", Lists.newArrayList(ChatColor.GRAY + "Food for rich people."));
+    Misc20(new ItemStack(Material.ELYTRA, 1), "500", ChatColor.GOLD + "Elytra Wings", Lists.newArrayList(ChatColor.GRAY + "Fly like the wind!"));
 
     private ItemStack i;
     private String name;
