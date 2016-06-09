@@ -9,6 +9,7 @@ import com.minegusta.gearup.shop.ItemShop;
 import com.minegusta.gearup.shop.ShopInv;
 import com.minegusta.gearup.shop.ShopOwnerDamageEvent;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -103,7 +104,7 @@ public class ShopListener implements Listener {
         }
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onEating(PlayerItemConsumeEvent e)
     {
         NatureBoost boost = new NatureBoost(e);
