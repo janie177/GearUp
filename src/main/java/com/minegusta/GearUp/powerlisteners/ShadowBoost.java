@@ -17,7 +17,7 @@ public class ShadowBoost
 
     public boolean isDark()
     {
-        return p.getLocation().getBlock().getLightLevel() < ((byte) 7);
+        return p.getLocation().getBlock().getLightLevel() < 7;
     }
 
     public boolean isInMap()
